@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html><html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mojalefa Holdings</title>
-
-<style>
+<title>Mojalefa Holdings</title><style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial, Helvetica, sans-serif;
 background:#0f0f0f;
 color:white;
 }
@@ -24,24 +18,24 @@ top:0;
 z-index:1000;
 }
 
-.nav-container{
+.nav{
 display:flex;
-justify-content:space-between;
 align-items:center;
-max-width:1100px;
+justify-content:space-between;
+max-width:1200px;
 margin:auto;
-padding:15px;
+padding:15px 20px;
 }
 
 .logo{
-height:70px;
+height:90px;
 }
 
 nav a{
 margin-left:25px;
 text-decoration:none;
 color:white;
-font-weight:500;
+font-weight:600;
 }
 
 nav a:hover{
@@ -49,16 +43,9 @@ color:#c9a227;
 }
 
 .hero{
-height:85vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 text-align:center;
-background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
-background-size:cover;
-background-position:center;
+padding:120px 20px;
+background:linear-gradient(180deg,#0f0f0f,#1a1a1a);
 }
 
 .hero h1{
@@ -68,12 +55,13 @@ margin-bottom:10px;
 
 .hero p{
 font-size:20px;
-color:#ccc;
+opacity:0.8;
 }
 
 .btn{
+display:inline-block;
 margin-top:25px;
-padding:14px 32px;
+padding:14px 30px;
 background:#c9a227;
 color:black;
 text-decoration:none;
@@ -82,155 +70,107 @@ border-radius:6px;
 }
 
 .section{
+padding:80px 20px;
 max-width:1100px;
 margin:auto;
-padding:70px 20px;
-text-align:center;
 }
 
-.services{
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
+}
+
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-margin-top:40px;
 }
 
 .card{
-background:#1a1a1a;
+background:#1b1b1b;
 padding:30px;
 border-radius:10px;
-transition:0.3s;
+text-align:center;
 }
 
-.card:hover{
-transform:translateY(-6px);
-background:#222;
+.card h3{
+margin-bottom:10px;
 }
 
-.stats{
-display:flex;
-justify-content:center;
-gap:70px;
-padding:60px;
-font-size:22px;
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.stats h2{
-font-size:40px;
+.price-card{
+background:#1b1b1b;
+padding:30px;
+border-radius:10px;
+text-align:center;
+}
+
+.price{
+font-size:35px;
 color:#c9a227;
+margin:10px 0;
 }
 
 footer{
 background:#111;
 text-align:center;
-padding:40px;
-color:#777;
-margin-top:40px;
+padding:40px 20px;
+margin-top:60px;
 }
 
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<div class="nav-container">
-
-<img src="Logo.jpg" alt="Mojalefa Holdings Logo" class="logo">
-
+</style></head><body><header>
+<div class="nav">
+<img src="Logo.jpg" class="logo">
 <nav>
-<a href="#">Home</a>
-<a href="#divisions">Divisions</a>
+<a href="#home">Home</a>
 <a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
 <a href="#contact">Contact</a>
 </nav>
-
 </div>
-
-</header>
-
-<section class="hero">
-
+</header><section class="hero" id="home">
 <h1>Mojalefa Holdings</h1>
-
-<p>Building Modern African Businesses</p>
-
-<a class="btn" href="#divisions">Explore Ventures</a>
-
-</section>
-
-<section class="stats">
-
-<div>
-<h2>5+</h2>
-<p>Future Ventures</p>
-</div>
-
-<div>
-<h2>1</h2>
-<p>Holding Company</p>
-</div>
-
-<div>
-<h2>Global</h2>
-<p>Vision</p>
-</div>
-
-</section>
-
-<section class="section" id="divisions">
-
-<h2>Our Divisions</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>Digital Ventures</h3>
-<p>Website development, branding and online business creation.</p>
-</div>
-
-<div class="card">
-<h3>Logistics Ventures</h3>
-<p>Future transport and supply chain projects.</p>
-</div>
-
-<div class="card">
-<h3>Investment Projects</h3>
-<p>Investing in scalable digital companies.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="about">
-
-<h2>About Mojalefa Holdings</h2>
-
-<p>
-Mojalefa Holdings is a modern holding company focused on building scalable
-digital ventures and investing in future industries across Africa.
+<p>Digital Solutions • Brand Development • Web Creation</p>
+<a class="btn" href="#contact">Start a Project</a>
+</section><section class="section" id="about">
+<h2>About Us</h2>
+<p style="text-align:center;max-width:700px;margin:auto;opacity:0.8">
+Mojalefa Holdings is a modern digital venture focused on helping businesses establish a powerful online presence through professional logo design and website development.
 </p>
-
-</section>
-
-<section class="section" id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: contact@mojalefaholdings.com</p>
-<p>Location: South Africa</p>
-
-</section>
-
-<footer>
-
-<p>© 2026 Mojalefa Holdings</p>
-
-</footer>
-
-</body>
-
+</section><section class="section" id="services">
+<h2>Our Services</h2><div class="cards"><div class="card">
+<h3>Logo Design</h3>
+<p>Clean, modern branding designed to make your business stand out.</p>
+</div><div class="card">
+<h3>Website Creation</h3>
+<p>Professional responsive websites built for businesses and entrepreneurs.</p>
+</div><div class="card">
+<h3>Business Setup</h3>
+<p>Helping startups establish a strong digital presence.</p>
+</div></div></section><section class="section" id="pricing">
+<h2>Pricing</h2><div class="pricing"><div class="price-card">
+<h3>Logo Design</h3>
+<div class="price">R500</div>
+<p>Professional custom logo for your brand.</p>
+</div><div class="price-card">
+<h3>Website Creation</h3>
+<div class="price">R1200</div>
+<p>Modern responsive website for your business.</p>
+</div><div class="price-card">
+<h3>Full Package</h3>
+<div class="price">R1500</div>
+<p>Logo design + full website setup.</p>
+</div></div><p style="text-align:center;margin-top:30px;opacity:0.7">50% deposit required before project begins.</p></section><section class="section" id="contact">
+<h2>Contact</h2><p style="text-align:center">Email: mojalefaholdings@email.com</p>
+<p style="text-align:center">Phone: +27 00 000 0000</p>
+<p style="text-align:center">Location: South Africa</p></section><footer>
+<p>© 2026 Mojalefa Holdings. All rights reserved.</p>
+</footer></body>
 </html>
