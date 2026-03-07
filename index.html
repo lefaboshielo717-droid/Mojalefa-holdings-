@@ -2,175 +2,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mojalefa Holdings</title><style>
-
+<title>Mojalefa Holdings</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',sans-serif}
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f0f0f;
-color:white;
-}
+background:#0b0b0b;
+color:#fff;
+overflow-x:hidden;
+scroll-behavior:smooth;
+}/* NAV */ nav{ position:fixed; top:0; width:100%; padding:18px 8%; display:flex; justify-content:space-between; align-items:center; backdrop-filter:blur(12px); background:rgba(0,0,0,.4); z-index:999; }
 
-header{
-background:#111;
-position:sticky;
-top:0;
-z-index:1000;
-}
+nav img{ height:70px; }
 
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-max-width:1200px;
-margin:auto;
-padding:15px 20px;
-}
+nav ul{ display:flex; list-style:none; gap:30px; }
 
-.logo{
-height:90px;
-}
+nav a{ text-decoration:none; color:#fff; font-weight:500; transition:.3s; }
 
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:white;
-font-weight:600;
-}
+nav a:hover{ color:#d4af37; }
 
-nav a:hover{
-color:#c9a227;
-}
+/* HERO */ .hero{ height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 20px; background:radial-gradient(circle at 30% 30%,#1b1b1b,#050505); animation:fadeIn 2s ease; }
 
-.hero{
-text-align:center;
-padding:120px 20px;
-background:linear-gradient(180deg,#0f0f0f,#1a1a1a);
-}
+.hero img{ width:220px; margin-bottom:20px; animation:float 6s ease-in-out infinite; }
 
-.hero h1{
-font-size:50px;
-margin-bottom:10px;
-}
+.hero h1{ font-size:48px; margin-bottom:15px; background:linear-gradient(90deg,#fff,#d4af37); -webkit-background-clip:text; color:transparent; }
 
-.hero p{
-font-size:20px;
-opacity:0.8;
-}
+.hero p{ max-width:600px; opacity:.8; }
 
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
-background:#c9a227;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:6px;
-}
+.hero button{ margin-top:30px; padding:14px 32px; border:none; background:linear-gradient(90deg,#d4af37,#f7d774); color:#000; font-weight:600; border-radius:30px; cursor:pointer; transition:.4s; }
 
-.section{
-padding:80px 20px;
-max-width:1100px;
-margin:auto;
-}
+.hero button:hover{ transform:scale(1.05); }
 
-.section h2{
-text-align:center;
-margin-bottom:40px;
-font-size:32px;
-}
+/* SECTION */ section{ padding:120px 8%; }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+.section-title{ text-align:center; margin-bottom:60px; font-size:36px; }
 
-.card{
-background:#1b1b1b;
-padding:30px;
-border-radius:10px;
-text-align:center;
-}
+/* SERVICES 3D */ .services{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; perspective:1000px; }
 
-.card h3{
-margin-bottom:10px;
-}
+.card{ background:#111; padding:40px; border-radius:20px; transition:transform .4s, box-shadow .4s; transform-style:preserve-3d; }
 
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
+.card:hover{ transform:rotateY(8deg) rotateX(8deg) scale(1.05); box-shadow:0 20px 60px rgba(212,175,55,.4); }
 
-.price-card{
-background:#1b1b1b;
-padding:30px;
-border-radius:10px;
-text-align:center;
-}
+.card h3{ margin-bottom:15px; color:#d4af37; }
 
-.price{
-font-size:35px;
-color:#c9a227;
-margin:10px 0;
-}
+/* STRIPE STYLE PRICING */ .pricing{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:40px; }
 
-footer{
-background:#111;
-text-align:center;
-padding:40px 20px;
-margin-top:60px;
-}
+.price-card{ background:#111; padding:50px 40px; border-radius:22px; position:relative; overflow:hidden; transition:.4s; }
 
-</style></head><body><header>
-<div class="nav">
-<img src="Logo.jpg" class="logo">
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
-</nav>
-</div>
-</header><section class="hero" id="home">
+.price-card::before{ content:""; position:absolute; width:160%; height:160%; background:linear-gradient(120deg,transparent,#d4af37,transparent); top:-40%; left:-40%; transform:rotate(25deg); opacity:.1; }
+
+.price-card:hover{ transform:translateY(-12px) scale(1.03); box-shadow:0 30px 80px rgba(0,0,0,.6); }
+
+.price{ font-size:42px; margin:20px 0; color:#d4af37; }
+
+.price-card ul{ list-style:none; margin:20px 0; line-height:32px; opacity:.9; }
+
+.price-card button{ margin-top:20px; width:100%; padding:14px; border:none; border-radius:30px; background:#d4af37; font-weight:600; cursor:pointer; }
+
+/* CONTACT */ .contact{ text-align:center; }
+
+.contact a{ color:#d4af37; text-decoration:none; }
+
+/* WHATSAPP BUTTON */ .whatsapp{ position:fixed; bottom:30px; right:30px; background:#25D366; color:#fff; padding:16px 20px; border-radius:40px; text-decoration:none; font-weight:600; box-shadow:0 10px 30px rgba(0,0,0,.4); }
+
+/* ANIMATIONS */ @keyframes float{ 0%{transform:translateY(0)} 50%{transform:translateY(-15px)} 100%{transform:translateY(0)} }
+
+@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+
+/* SMOOTH PAGE TRANSITION */ .fade-section{ opacity:0; transform:translateY(60px); transition:1s; }
+
+.fade-section.visible{ opacity:1; transform:translateY(0); }
+
+</style>
+</head>
+<body><nav>
+<img src="Logo.jpg">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav><section class="hero" id="home">
+<img src="Logo.jpg">
 <h1>Mojalefa Holdings</h1>
-<p>Digital Solutions • Brand Development • Web Creation</p>
-<a class="btn" href="#contact">Start a Project</a>
-</section><section class="section" id="about">
-<h2>About Us</h2>
-<p style="text-align:center;max-width:700px;margin:auto;opacity:0.8">
-Mojalefa Holdings is a modern digital venture focused on helping businesses establish a powerful online presence through professional logo design and website development.
-</p>
-</section><section class="section" id="services">
-<h2>Our Services</h2><div class="cards"><div class="card">
+<p>Premium website creation and logo design for modern brands and businesses.</p>
+<button onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">View Pricing</button>
+</section><section class="fade-section" id="services">
+<h2 class="section-title">Our Services</h2>
+<div class="services"><div class="card">
 <h3>Logo Design</h3>
-<p>Clean, modern branding designed to make your business stand out.</p>
+<p>Professional branding and logo identity for businesses.</p>
 </div><div class="card">
 <h3>Website Creation</h3>
-<p>Professional responsive websites built for businesses and entrepreneurs.</p>
+<p>Modern responsive websites designed to grow your business.</p>
 </div><div class="card">
-<h3>Business Setup</h3>
-<p>Helping startups establish a strong digital presence.</p>
-</div></div></section><section class="section" id="pricing">
-<h2>Pricing</h2><div class="pricing"><div class="price-card">
+<h3>Full Business Package</h3>
+<p>Logo + Website bundle to launch your brand professionally.</p>
+</div></div>
+</section><section class="fade-section" id="pricing">
+<h2 class="section-title">Pricing</h2>
+<div class="pricing"><div class="price-card">
 <h3>Logo Design</h3>
 <div class="price">R500</div>
-<p>Professional custom logo for your brand.</p>
+<ul>
+<li>Professional logo</li>
+<li>Modern design</li>
+<li>High quality files</li>
+</ul>
+<button>Get Started</button>
 </div><div class="price-card">
 <h3>Website Creation</h3>
 <div class="price">R1200</div>
-<p>Modern responsive website for your business.</p>
+<ul>
+<li>Responsive website</li>
+<li>Modern design</li>
+<li>Business ready</li>
+</ul>
+<button>Get Started</button>
 </div><div class="price-card">
-<h3>Full Package</h3>
+<h3>Business Bundle</h3>
 <div class="price">R1500</div>
-<p>Logo design + full website setup.</p>
-</div></div><p style="text-align:center;margin-top:30px;opacity:0.7">50% deposit required before project begins.</p></section><section class="section" id="contact">
-<h2>Contact</h2><p style="text-align:center">Email: Holdingsmojalefa@gmail.com</p>
-<p style="text-align:center">Phone: +27 65 812 6188</p>
-<p style="text-align:center">Location: South Africa</p></section><footer>
-<p>© 2026 Mojalefa Holdings. All rights reserved.</p>
-</footer></body>
+<ul>
+<li>Logo + Website</li>
+<li>Full brand setup</li>
+<li>Best value</li>
+</ul>
+<button>Get Started</button>
+</div></div>
+</section><section class="fade-section contact" id="contact">
+<h2 class="section-title">Contact</h2>
+<p>Email: Holdingsmojalefa@gmail.com</p>
+<p>Phone / WhatsApp: 065 812 6188</p>
+</section><a class="whatsapp" href="https://wa.me/27658126188">Chat on WhatsApp</a>
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+
+document.querySelectorAll('.fade-section').forEach(section=>{
+observer.observe(section);
+});
+
+</script></body>
 </html>
