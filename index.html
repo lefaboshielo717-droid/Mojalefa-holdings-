@@ -1,95 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mojalefa Holdings</title>
 
 <style>
 
-*{
+body{
 margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial, sans-serif;
+background:#0f0f0f;
+color:white;
 scroll-behavior:smooth;
 }
 
-body{
-background:#000;
-color:white;
-}
+/* HEADER */
 
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-background:#050505;
+header{
+background:#111;
 position:sticky;
 top:0;
 z-index:1000;
 }
 
-nav h2{
-color:#d4a017;
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+padding:15px;
+}
+
+.logo{
+height:75px;
 }
 
 nav a{
-color:white;
+margin-left:25px;
 text-decoration:none;
-margin-left:20px;
-font-size:14px;
+color:white;
+font-weight:500;
 }
 
 nav a:hover{
-color:#d4a017;
+color:#c9a227;
 }
 
 /* HERO */
 
 .hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:120px 20px;
+background:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab");
+background-size:cover;
+background-position:center;
 }
 
 .hero h1{
-font-size:40px;
-margin-bottom:20px;
+font-size:55px;
+margin-bottom:10px;
 }
 
 .hero p{
-color:#aaa;
-margin-bottom:30px;
+font-size:22px;
+color:#ccc;
 }
 
 .btn{
-background:#d4a017;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
+margin-top:30px;
+padding:14px 32px;
+background:#c9a227;
 color:black;
+text-decoration:none;
 font-weight:bold;
+border-radius:6px;
 }
 
 /* SECTIONS */
 
-section{
+.section{
+max-width:1200px;
+margin:auto;
 padding:80px 20px;
 text-align:center;
 }
 
-.container{
-max-width:1100px;
-margin:auto;
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:center;
+gap:80px;
+padding:70px;
+font-size:20px;
 }
 
-/* CARDS */
+.stats h2{
+font-size:42px;
+color:#c9a227;
+}
 
-.grid{
+/* DIVISIONS */
+
+.services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
@@ -97,284 +120,190 @@ margin-top:40px;
 }
 
 .card{
-background:#0a0a0a;
-padding:30px;
-border-radius:15px;
+background:#1a1a1a;
+padding:35px;
+border-radius:10px;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-8px);
+background:#222;
 }
 
-/* PRICING */
+/* FOUNDER */
 
-.price{
-font-size:40px;
-color:#d4a017;
-margin:20px 0;
+.founder{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
 }
 
-/* PROJECT IMAGE */
+.founder img{
+width:120px;
+border-radius:100px;
+}
 
-.project img{
-width:100%;
+/* CONTACT */
+
+.contact-box{
+background:#1a1a1a;
+padding:40px;
 border-radius:10px;
+margin-top:30px;
 }
 
-/* TESTIMONIAL */
+/* FOOTER */
 
-.testimonial{
-font-style:italic;
-color:#ccc;
-}
-
-/* WHATSAPP BUTTON */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:14px 25px;
-border-radius:30px;
-color:white;
-text-decoration:none;
-font-weight:bold;
+footer{
+background:#111;
+text-align:center;
+padding:40px;
+color:#777;
+margin-top:60px;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header>
+
+<div class="nav-container">
+
+<img src="Logo.jpg" class="logo">
 
 <nav>
-<h2>Mojalefa Holdings</h2>
-
-<div>
-<a href="#services">Services</a>
-<a href="#pricing">Pricing</a>
-<a href="#projects">Projects</a>
+<a href="#home">Home</a>
+<a href="#divisions">Divisions</a>
+<a href="#ventures">Ventures</a>
+<a href="#founder">Founder</a>
 <a href="#contact">Contact</a>
-</div>
-
 </nav>
 
+</div>
 
-<!-- HERO -->
+</header>
 
-<section class="hero">
+<section class="hero" id="home">
 
-<h1>Websites That Make Businesses Look Expensive</h1>
+<h1>Mojalefa Holdings</h1>
 
-<p>Premium website creation and logo design for modern businesses.</p>
+<p>Building Modern African Businesses</p>
 
-<a class="btn" href="#pricing">View Pricing</a>
+<a class="btn" href="#divisions">Explore Ventures</a>
 
 </section>
 
+<section class="stats">
 
-<!-- SERVICES -->
-
-<section id="services">
-
-<div class="container">
-
-<h2>Our Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Logo Design</h3>
-<p>Professional branding and logo identity for businesses.</p>
+<div>
+<h2>5+</h2>
+<p>Future Ventures</p>
 </div>
 
-<div class="card">
-<h3>Website Creation</h3>
-<p>Modern responsive websites designed to grow your business.</p>
+<div>
+<h2>1</h2>
+<p>Holding Company</p>
 </div>
 
-<div class="card">
-<h3>Business Bundle</h3>
-<p>Full brand setup including logo and website.</p>
-</div>
-
-</div>
-
+<div>
+<h2>Global</h2>
+<p>Vision</p>
 </div>
 
 </section>
 
+<section class="section" id="divisions">
 
-<!-- PRICING -->
+<h2>Our Divisions</h2>
 
-<section id="pricing">
-
-<div class="container">
-
-<h2>Pricing</h2>
-
-<div class="grid">
+<div class="services">
 
 <div class="card">
-<h3>Logo Design</h3>
-<div class="price">R500</div>
-<p>Professional logo</p>
-<p>Modern design</p>
-<p>High quality files</p>
+<h3>Digital Ventures</h3>
+<p>Building websites, digital brands and online companies.</p>
 </div>
 
 <div class="card">
-<h3>Website Creation</h3>
-<div class="price">R1200</div>
-<p>Responsive website</p>
-<p>Modern design</p>
-<p>Business ready</p>
+<h3>Logistics Ventures</h3>
+<p>Future transportation and infrastructure investments.</p>
 </div>
 
 <div class="card">
-<h3>Business Bundle</h3>
-<div class="price">R1500</div>
-<p>Logo + Website</p>
-<p>Full brand setup</p>
-<p>Best value</p>
-</div>
-
+<h3>Investment Projects</h3>
+<p>Investing in scalable digital and technology startups.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="section" id="ventures">
 
-<!-- WHY CHOOSE US -->
+<h2>Future Ventures</h2>
 
-<section>
-
-<div class="container">
-
-<h2>Why Choose Mojalefa Holdings</h2>
-
-<div class="grid">
+<div class="services">
 
 <div class="card">
-<h3>Modern Design</h3>
-<p>Clean and premium looking websites.</p>
+<h3>AI Tools</h3>
+<p>Leveraging artificial intelligence to build modern businesses.</p>
 </div>
 
 <div class="card">
-<h3>Mobile Optimized</h3>
-<p>Your site works perfectly on phones and computers.</p>
+<h3>E-Commerce</h3>
+<p>Developing scalable online stores and brands.</p>
 </div>
 
 <div class="card">
-<h3>Fast Delivery</h3>
-<p>Quick turnaround without sacrificing quality.</p>
-</div>
-
-<div class="card">
-<h3>Affordable</h3>
-<p>Startup friendly prices for small businesses.</p>
-</div>
-
+<h3>Technology</h3>
+<p>Exploring high-growth industries and digital innovation.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="section" id="founder">
 
-<!-- PROJECTS -->
+<h2>Founder</h2>
 
-<section id="projects">
+<div class="founder">
 
-<div class="container">
+<img src="https://i.imgur.com/0y0y0y0.png">
 
-<h2>Recent Projects</h2>
-
-<div class="grid">
-
-<div class="card project">
-<img src="https://via.placeholder.com/400x250">
-<h3>Restaurant Website</h3>
-</div>
-
-<div class="card project">
-<img src="https://via.placeholder.com/400x250">
-<h3>Clothing Brand Store</h3>
-</div>
-
-<div class="card project">
-<img src="https://via.placeholder.com/400x250">
-<h3>Real Estate Website</h3>
-</div>
-
-</div>
+<p>
+Mojalefa Boshielo founded Mojalefa Holdings with the vision of building
+modern businesses that create long-term value across Africa.
+</p>
 
 </div>
 
 </section>
 
-
-<!-- TESTIMONIALS -->
-
-<section>
-
-<div class="container">
-
-<h2>What Clients Say</h2>
-
-<div class="grid">
-
-<div class="card testimonial">
-⭐⭐⭐⭐⭐
-<p>"Very professional website. My business now looks legit online."</p>
-<strong>- Sipho M.</strong>
-</div>
-
-<div class="card testimonial">
-⭐⭐⭐⭐⭐
-<p>"Fast delivery and amazing design."</p>
-<strong>- Thabo K.</strong>
-</div>
-
-<div class="card testimonial">
-⭐⭐⭐⭐⭐
-<p>"My brand finally looks professional."</p>
-<strong>- Lerato P.</strong>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<div class="container">
+<section class="section" id="contact">
 
 <h2>Contact</h2>
 
-<p>Email: Holdingsmojalefa@gmail.com</p>
-<p>Phone / WhatsApp: 065 812 6188</p>
+<div class="contact-box">
+
+<p>Email: contact@mojalefaholdings.com</p>
+<p>Location: South Africa</p>
+<p>Business Inquiries Welcome</p>
 
 </div>
 
 </section>
 
+<footer>
 
-<!-- WHATSAPP BUTTON -->
+<p>© 2026 Mojalefa Holdings</p>
 
-<a class="whatsapp" href="https://wa.me/27658126188" target="_blank">
-Chat on WhatsApp
-</a>
-
+</footer>
 
 </body>
+
 </html>
