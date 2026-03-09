@@ -32,14 +32,13 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 nav img{
 height:60px;
-animation:rotateLogo 18s linear infinite;
 }
 
 nav ul{
@@ -63,7 +62,7 @@ color:#d4af37;
 
 .hero{
 height:100vh;
-background:url("buildings.jpg") center/cover no-repeat;
+background:url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab") center/cover no-repeat;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -98,11 +97,13 @@ transform:scale(1.05);
 box-shadow:0 0 20px rgba(212,175,55,0.7);
 }
 
-/* FOUNDER */
+/* SECTIONS */
 
 section{
 padding:100px 8%;
 }
+
+/* FOUNDER */
 
 .founder{
 text-align:center;
@@ -120,7 +121,6 @@ margin-bottom:20px;
 display:flex;
 gap:40px;
 overflow-x:auto;
-padding-bottom:20px;
 margin-top:40px;
 }
 
@@ -154,7 +154,7 @@ transition:.4s;
 }
 
 .card:hover{
-transform:translateY(-10px) rotateX(5deg);
+transform:translateY(-10px);
 box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
@@ -163,12 +163,7 @@ margin-bottom:10px;
 color:#d4af37;
 }
 
-/* ANIMATIONS */
-
-@keyframes rotateLogo{
-from{transform:rotate(0deg);}
-to{transform:rotate(360deg);}
-}
+/* SCROLL ANIMATION */
 
 .fade{
 opacity:0;
@@ -194,7 +189,6 @@ transform:translateY(0);
 <li><a href="#home">Home</a></li>
 <li><a href="#founder">Founder</a></li>
 <li><a href="#divisions">Divisions</a></li>
-<li><a href="#ventures">Ventures</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
@@ -218,8 +212,7 @@ Explore Ventures
 <h2>Founder</h2>
 
 <p>
-Mojalefa founded Mojalefa Holdings with a vision to build innovative African businesses
-across technology, AI, and digital commerce.
+Mojalefa founded Mojalefa Holdings with the vision of building modern businesses that create long-term value across Africa.
 </p>
 
 </div>
@@ -242,7 +235,7 @@ across technology, AI, and digital commerce.
 
 <div class="stat">
 <h3>5+</h3>
-<p>Ventures</p>
+<p>Future Ventures</p>
 </div>
 
 </div>
@@ -256,21 +249,35 @@ across technology, AI, and digital commerce.
 <div class="divisions">
 
 <div class="card">
-<h3>🤖 AI Tools</h3>
-<p>Building AI powered tools and automation solutions.</p>
+<h3>Digital Ventures</h3>
+<p>We create professional websites and logo designs for modern businesses.</p>
 </div>
 
 <div class="card">
-<h3>🛒 E-Commerce</h3>
-<p>Developing digital commerce brands and platforms.</p>
+<h3>AI Tools</h3>
+<p>Leveraging artificial intelligence to build modern business tools.</p>
 </div>
 
 <div class="card">
-<h3>💻 Technology</h3>
-<p>Creating modern web and software solutions.</p>
+<h3>E-Commerce</h3>
+<p>Developing scalable online stores and digital brands.</p>
+</div>
+
+<div class="card">
+<h3>Technology</h3>
+<p>Exploring high-growth industries and digital innovation.</p>
 </div>
 
 </div>
+
+</section>
+
+<section id="contact" class="fade">
+
+<h2>Contact</h2>
+
+<p>Email: Holdingsmojalefa@gmail.com</p>
+<p>Phone / WhatsApp: 065 812 6188</p>
 
 </section>
 
