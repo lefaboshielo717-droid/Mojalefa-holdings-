@@ -8,22 +8,26 @@
 <style>
 
 body{
+margin:0;
+font-family:Arial;
 background:#0a0a0a;
 color:white;
-font-family:Arial;
-margin:0;
-text-align:center;
 }
 
+/* NAV */
+
 nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
 background:#000;
-padding:20px;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 15px;
+margin-left:20px;
 font-size:18px;
 }
 
@@ -31,37 +35,85 @@ nav a:hover{
 color:#d4af37;
 }
 
+/* PAGE */
+
 .container{
-padding:80px 20px;
+padding:100px 8%;
+text-align:center;
 }
 
-.pricing{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:30px;
-margin-top:40px;
+.container h1{
+font-size:45px;
 }
+
+/* TOGGLE */
+
+.toggle{
+margin-top:30px;
+}
+
+.toggle button{
+background:#111;
+border:1px solid #333;
+color:white;
+padding:10px 20px;
+margin:5px;
+cursor:pointer;
+border-radius:20px;
+}
+
+.toggle button.active{
+background:#d4af37;
+color:black;
+}
+
+/* PRICING GRID */
+
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+/* CARD */
 
 .card{
 background:#111;
-padding:40px;
-border-radius:12px;
-width:250px;
+padding:50px 30px;
+border-radius:15px;
+border:1px solid #222;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 50px rgba(212,175,55,0.25);
+border-color:#d4af37;
 }
 
 .price{
-font-size:40px;
+font-size:45px;
 color:#d4af37;
 margin:20px 0;
 }
 
-button{
+button.order{
 background:#d4af37;
 border:none;
-padding:12px 20px;
-border-radius:25px;
+padding:14px 28px;
+border-radius:30px;
 cursor:pointer;
+}
+
+button.order:hover{
+box-shadow:0 0 20px rgba(212,175,55,0.6);
+}
+
+/* HIDE */
+
+.hidden{
+display:none;
 }
 
 </style>
@@ -70,22 +122,33 @@ cursor:pointer;
 <body>
 
 <nav>
+<div>Mojalefa Holdings</div>
+
+<div>
 <a href="index.html">Home</a>
 <a href="pricing.html">Pricing</a>
+</div>
 </nav>
 
 <div class="container">
 
 <h1>Pricing</h1>
-<p>Services offered by Mojalefa Holdings</p>
+<p>Professional digital services for modern businesses</p>
 
-<div class="pricing">
+<div class="toggle">
+<button id="basicBtn" class="active">Basic</button>
+<button id="proBtn">Pro</button>
+</div>
+
+<!-- BASIC -->
+
+<div id="basic" class="pricing">
 
 <div class="card">
 <h2>Logo Design</h2>
 <div class="price">R500</div>
-<p>Professional logo design for your brand.</p>
-<button onclick="window.location.href='https://wa.me/27658126188'">
+<p>Professional logo design.</p>
+<button class="order" onclick="window.location.href='https://wa.me/27658126188'">
 Order on WhatsApp
 </button>
 </div>
@@ -93,8 +156,32 @@ Order on WhatsApp
 <div class="card">
 <h2>Website Creation</h2>
 <div class="price">R800</div>
-<p>Modern responsive website for your business.</p>
-<button onclick="window.location.href='https://wa.me/27658126188'">
+<p>Modern responsive website.</p>
+<button class="order" onclick="window.location.href='https://wa.me/27658126188'">
+Order on WhatsApp
+</button>
+</div>
+
+</div>
+
+<!-- PRO -->
+
+<div id="pro" class="pricing hidden">
+
+<div class="card">
+<h2>Brand Package</h2>
+<div class="price">R1200</div>
+<p>Website + Logo design.</p>
+<button class="order" onclick="window.location.href='https://wa.me/27658126188'">
+Order on WhatsApp
+</button>
+</div>
+
+<div class="card">
+<h2>Business Website</h2>
+<div class="price">R1500</div>
+<p>Advanced website setup.</p>
+<button class="order" onclick="window.location.href='https://wa.me/27658126188'">
 Order on WhatsApp
 </button>
 </div>
@@ -102,6 +189,32 @@ Order on WhatsApp
 </div>
 
 </div>
+
+<script>
+
+const basicBtn = document.getElementById("basicBtn");
+const proBtn = document.getElementById("proBtn");
+
+const basic = document.getElementById("basic");
+const pro = document.getElementById("pro");
+
+basicBtn.onclick = () =>{
+basic.classList.remove("hidden")
+pro.classList.add("hidden")
+
+basicBtn.classList.add("active")
+proBtn.classList.remove("active")
+}
+
+proBtn.onclick = () =>{
+pro.classList.remove("hidden")
+basic.classList.add("hidden")
+
+proBtn.classList.add("active")
+basicBtn.classList.remove("active")
+}
+
+</script>
 
 </body>
 </html>
