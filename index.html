@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+⁷<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -272,3 +272,166 @@ font-family:"Great Vibes";
 color:#ff9ed0;
 
 }
+/* Photo Gallery */
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+.gallery img{
+
+width:100%;
+height:420px;
+object-fit:cover;
+
+border-radius:25px;
+
+transition:.5s;
+
+box-shadow:0 0 25px rgba(255,105,180,.25);
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05) rotate(1deg);
+
+box-shadow:0 0 45px hotpink;
+
+}
+
+/* Love Letter */
+
+.letter{
+
+max-width:900px;
+
+margin:auto;
+
+background:rgba(255,255,255,.08);
+
+padding:50px;
+
+border-radius:30px;
+
+backdrop-filter:blur(15px);
+
+line-height:2;
+
+font-size:18px;
+
+box-shadow:0 0 35px rgba(255,105,180,.2);
+
+}
+
+/* Reasons */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+padding:35px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:25px;
+
+backdrop-filter:blur(15px);
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 35px hotpink;
+
+}
+
+.card h3{
+
+color:#ff8cc8;
+
+margin-bottom:15px;
+
+}
+
+/* Footer */
+
+footer{
+
+padding:80px;
+
+text-align:center;
+
+background:black;
+
+margin-top:100px;
+
+}
+
+footer h2{
+
+font-family:"Great Vibes";
+
+font-size:50px;
+
+color:#ff8cc8;
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+color:#ddd;
+
+font-size:18px;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.hero-content{
+
+padding:35px;
+
+}
+
+.title{
+
+font-size:42px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
