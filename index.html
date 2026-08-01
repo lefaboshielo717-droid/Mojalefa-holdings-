@@ -736,3 +736,68 @@ Happy National Girlfriend's Day ❤️
 </div>
 
 </section>
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>Forever Us ❤️</h2>
+
+<p>
+Made with love by Lefa for the most amazing girl in the world.
+</p>
+
+<br>
+
+<p>
+No matter where life takes us,
+I'll always be grateful for every memory we've shared.
+</p>
+
+<br>
+
+<p style="font-size:22px;color:#ff8cc8;">
+I Love You, Minnie ❤️
+</p>
+
+</footer>
+
+<script>
+
+// Floating Hearts
+
+const hearts = document.querySelector(".hearts");
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+heart.style.animationDuration=(5+Math.random()*6)+"s";
+
+hearts.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},11000);
+
+}
+
+setInterval(createHeart,300);
+
+
+// Fade-in Animation
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry
